@@ -1,0 +1,105 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import styles from './Hero.module.css';
+import { FaFacebook, FaLinkedin, FaGithub, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { Typewriter } from 'react-simple-typewriter';
+import img from '../assets/Hero/Hero.png';
+import pdf from '../pdf/souvik cv.pdf';
+
+const Hero = () => {
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const words = ['Souvik Das.', 'a Frontend Developer.', 'a Designer.', 'a Guitarist.'];
+  const colors = ['orange', 'red', 'purple', 'green'];
+
+  const handleType = (count) => {
+    setCurrentWordIndex(count % words.length);
+  };
+
+  return (
+    <div className={styles.hero}>
+      <motion.div className={styles.left}>
+        <motion.div className={styles.details}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <motion.h6 initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.8 }}>Hi,</motion.h6>
+          <motion.div className={styles.info}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          >
+            <motion.h4
+              style={{ color: colors[currentWordIndex] }}
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+            >
+              I am {' '}
+              <Typewriter
+                words={words}
+                loop={true}
+                cursor
+                cursorStyle=" "
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+                onType={handleType}
+              />
+            </motion.h4>
+            <motion.p
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+            >
+              Skilled in transforming design mockups into live, interactive websites. Explore my portfolio to see my approach to combining creativity with technical expertise.
+            </motion.p>
+            <motion.div className={styles.social}
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 1, duration: 1 }}
+            >
+              <motion.a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                <FaFacebook className={styles.sicon} />
+              </motion.a>
+              <motion.a href="https://www.linkedin.com/in/souvik-d1" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                <FaLinkedin className={styles.sicon} />
+              </motion.a>
+              <motion.a href="https://github.com/souvik-coder24" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                <FaGithub className={styles.sicon} />
+              </motion.a>
+              <motion.a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                <FaInstagram className={styles.sicon} />
+              </motion.a>
+              <motion.a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                <FaXTwitter className={styles.sicon} />
+              </motion.a>
+            </motion.div>
+            <motion.a href={pdf} download="souvik_resume">
+              <motion.button
+                className={styles.btn}
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+              >
+                Download CV
+              </motion.button>
+            </motion.a>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+      <div className={styles.right}>
+        <motion.img
+          src={img}
+          alt="hero"
+          className={styles.heroImage}
+          initial={{ opacity: -7 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 3 }}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
