@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Navbar.module.css'; 
-import logoImage from '../assets/Logo/Souviklogo.png';
+import logoImage from '../../assets/Logo/Souviklogo.png';
 
 const Navbar = () => {
   const variants = {

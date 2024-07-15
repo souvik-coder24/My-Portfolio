@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import styles from './Hero.module.css';
 import { FaFacebook, FaLinkedin, FaGithub, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { Typewriter } from 'react-simple-typewriter';
-import img from '../assets/Hero/Hero.png';
-import pdf from '../pdf/souvik cv.pdf';
+import img from '../../assets/Hero/Hero.png';
+import pdf from '../../pdf/souvik cv.pdf';
 
 const Hero = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -23,36 +23,37 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <motion.h6 initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.8 }}>Hi,</motion.h6>
+          <motion.h6 initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.8 }}>Hello,</motion.h6>
           <motion.div className={styles.info}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
             <motion.h4
-              style={{ color: colors[currentWordIndex] }}
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
             >
               I am {' '}
-              <Typewriter
-                words={words}
-                loop={true}
-                cursor
-                cursorStyle=" "
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
-                onType={handleType}
-              />
+              <span style={{ color: colors[currentWordIndex] }}>
+                <Typewriter
+                  words={words}
+                  loop={true}
+                  cursor
+                  cursorStyle=" "
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                  onType={handleType}
+                />
+              </span>
             </motion.h4>
             <motion.p
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
             >
-              Skilled in transforming design mockups into live, interactive websites. Explore my portfolio to see my approach to combining creativity with technical expertise.
+              Skilled in turning design mockups into interactive websites, combining creativity and technical expertise. Explore my portfolio to see how I transform ideas into visually appealing and functional web experiences.
             </motion.p>
             <motion.div className={styles.social}
               initial={{ x: -100, opacity: 0 }}
@@ -92,10 +93,11 @@ const Hero = () => {
         <motion.img
           src={img}
           alt="hero"
+          loading="lazy"
           className={styles.heroImage}
-          initial={{ opacity: -7 }}
+          initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 3 }}
+          transition={{ duration: 1 }}
         />
       </div>
     </div>

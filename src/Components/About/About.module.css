@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+.about{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  background-color: transparent;
+  z-index: 1000;
+  padding: 4% 3%;
+}
+.left{
+    position: relative;
+}
+.left img{
+    width: 500px;
+}
+.right{
+    width: 600px;
+}
+.right h4{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Italianno", cursive;
+    color: #2d2c2c;
+}
+.right p{
+    padding-left: 40p;
+    font-size: 19px;
+}
+
+  

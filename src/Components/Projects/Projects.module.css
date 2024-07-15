@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+.project h3{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Italianno", cursive;
+    color: #2d2c2c;
+}
+.project h6{
+    text-align: center;
+    font-family: "Italianno", cursive;
+    font-size: 24px;
+    font-weight: 600;
+    color: #545151;
+}
+
+.verticalLine{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

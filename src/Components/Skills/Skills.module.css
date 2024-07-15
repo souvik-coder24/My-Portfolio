@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+.skills{
+  padding: 2% 6%;
+}
+.skills h4{
+  margin-left: 3%;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Italianno", cursive;
+  color: #2d2c2c;
+}
+.skillouter{
+  width: 1200px;
+  padding: 16px;
+  border-radius: 20px;
+  display: flex;
+  font-size: 45px;
+  gap: 60px;
+  margin-left: 8%;
+  overflow: hidden;
+  background-color: #fff;
+  color: #757575;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.sicon{
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.sicon:hover{
+  transform: scale(1.2);
+  color: #333;
+}

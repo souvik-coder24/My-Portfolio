@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
 import ParticleCanvas from './ParticleCanvas';
-import Navbar from './Components/Navbar';
-import Hero from './Components/Hero';
-// import Skills from "./Components/Skills";
+import Navbar from './Components/Navbar/Navbar';
+import Hero from './Components/Hero/Hero';
+import Skills from "./Components/Skills/Skills";
+import About from './Components/About/About';
+import Projects from './Components/Projects/Projects';
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
@@ -12,7 +15,10 @@ function App() {
       <ParticleCanvas />
       <Navbar />
       <Hero />
-      {/* <Skills /> */}
+      <Skills />
+      <About />
+      <Projects/>
+      <Footer />
     </div>
   );
 }
