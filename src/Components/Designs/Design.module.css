@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+.design {
+    max-width: 100%;
+    padding: 4%;
+}
+
+.design h2 {
+    font-size: 60px;
+    font-weight: 600;
+    font-family: "Italianno", cursive;
+    text-align: center;
+    background: linear-gradient(120deg, #3dd699, #4483e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+
+.cards {
+    max-width: 620px;
+    height: 400px;
+    border: 2px solid #3dd699;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    overflow: hidden; 
+}
+
+.cards:hover {
+    transform: scale(1.1);
+    z-index: 1000;
+}
+
+.cards img {
+    width: 30%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.cards h4 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.cards p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+.cards h6 {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+}
+.swiper {
+    justify-content: center;
+    width: 240px;
+    height: 320px;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }

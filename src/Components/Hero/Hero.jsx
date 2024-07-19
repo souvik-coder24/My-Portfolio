@@ -51,15 +51,13 @@ const Hero = () => {
             <motion.p
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-            >
+              transition={{ duration: 0.8 }}>
               Skilled in turning design mockups into interactive websites, combining creativity and technical expertise. Explore my portfolio to see how I transform ideas into visually appealing and functional web experiences.
             </motion.p>
             <motion.div className={styles.social}
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 1, duration: 1 }}
-            >
+              transition={{ delay: 1, duration: 1 }}>
               <motion.a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                 <FaFacebook className={styles.sicon} />
               </motion.a>
@@ -81,8 +79,7 @@ const Hero = () => {
                 className={styles.btn}
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-              >
+                transition={{ duration: 0.8 }}>
                 Download CV
               </motion.button>
             </motion.a>

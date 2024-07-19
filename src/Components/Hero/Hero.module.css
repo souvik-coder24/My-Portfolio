@@ -1,49 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-.hero{
+
+.hero {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
   z-index: 1000;
-  padding: 0 2% 0 2%;
+  padding: 0 2%;
 }
-.left{
-  width: 500px;
-  margin-left: 13%;
+
+.left {
+  width: 100%;
+  /* margin: 0; */
+  padding-top: 12%;
+  box-sizing: border-box;
 }
-.details h6{
+
+.details h6 {
   font-size: 33px;
   font-family: "Italianno", cursive;
   padding-bottom: -10px;
 }
-.details .info{
-  padding-left: 3%;
+
+.details .info {
+  padding-left: 4%;
 }
-.info h4{
+
+.info h4 {
   font-size: 60px;
   font-weight: 600;
   font-family: "Italianno", cursive;
 }
-.info p{
+
+.info p {
   font-size: 20px;
   font-weight: 500;
 }
-.info .social{
+
+.info .social {
   display: flex;
   gap: 10px;
   font-size: 26px;
   padding-bottom: 20px;
 }
-.sicon{
+
+.sicon {
   cursor: pointer;
   color: #333;
-  transition: transorm 0.3s ease;
+  transition: transform 0.3s ease;
 }
-.sicon:hover{
+
+.sicon:hover {
   transform: scale(1.2);
 }
-.btn{
+
+.btn {
   background-color: #1a1919;
   color: #fff;
   border: none;
@@ -53,16 +65,102 @@
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.btn:hover{
+
+.btn:hover {
   transform: scale(1.05);
   background: linear-gradient(136deg, purple, red);
   font-weight: 600;
 }
 
-right {
+.right {
   position: relative;
+  width: 100%;
+  text-align: center;
 }
-.right img{
-  width: 600px;
+
+.right img {
+  width: 100%;
+  max-width: 600px;
   padding-top: -200px;
+  padding-left: 60px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .hero {
+    padding: 0 5%;
+  }
+
+  .left {
+    width: 50%;
+    margin-left: 5%;
+  }
+
+  .right {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .left {
+    width: 500px;
+    margin-left: 13%;
+  }
+
+  .right img {
+    width: 600px;
+  }
+}
+
+/* Below 480px */
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 20%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    width: 100%;
+    margin: 0;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+  }
+  .details{
+    padding-top: 50%;
+  }
+  .details h6 {
+    font-size: 23px;
+    padding-bottom: -26px;
+  }
+  
+  .details .info {
+    padding-left: 2%;
+    padding-bottom: -2%;
+  }
+  
+  .info h4 {
+    font-size: 48px;
+  }
+  .info p {
+    font-size: 17px;
+    margin: 0;
+  }
+  .info .social {
+    padding-bottom: 10px;
+  }
+  .right {
+    width: 100%;
+    position: relative;
+    padding-right: 6%;
+  }
+
+  .right img {
+    width: 70%;
+    max-width: none;
+    position: absolute;
+    z-index: 0;
+  }
 }

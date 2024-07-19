@@ -76,3 +76,16 @@
   height: 20px;
   margin-right: 10px;
 }
+
+@media (max-width: 480px){
+  .navbar {
+    padding: 6px 10px;
+  }
+  .navbar-logo img {
+    width: 90px;
+    height: 20px;
+  }
+  .right{
+    display: none;
+  }
+}

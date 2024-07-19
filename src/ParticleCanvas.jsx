@@ -6,20 +6,27 @@ const ParticleCanvas = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
     const colors = ['#4285F4', '#EA4335', '#FBBC05', '#34A853']; // Google logo colors
     const particlesArray = [];
     let hue = 0;
+    let mouseX = 0;
+    let mouseY = 0;
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initParticles();
+    };
 
     class Particle {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.size = Math.random() * 8 + 3; // Increase size range here
-        this.speedX = (Math.random() - 0.5) * 0.5;
-        this.speedY = (Math.random() - 0.5) * 0.5;
+        this.baseSpeedX = (Math.random() - 0.5) * 1; // Base speed in X direction
+        this.baseSpeedY = (Math.random() - 0.5) * 1; // Base speed in Y direction
+        this.speedX = this.baseSpeedX;
+        this.speedY = this.baseSpeedY;
         this.color = colors[Math.floor(Math.random() * colors.length)];
       }
 
@@ -27,18 +34,26 @@ const ParticleCanvas = () => {
         const dx = mouseX - this.x;
         const dy = mouseY - this.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        const maxDistance = 50;
+        const maxDistance = 150; // Increased distance to make the attraction effect more noticeable
 
         if (distance < maxDistance) {
           const forceDirectionX = dx / distance;
           const forceDirectionY = dy / distance;
           const force = (maxDistance - distance) / maxDistance;
-          this.speedX += forceDirectionX * force * 2;
-          this.speedY += forceDirectionY * force * 2;
+          const accelerationX = forceDirectionX * force * 2; // Increased force multiplier for stronger attraction
+          const accelerationY = forceDirectionY * force * 2;
+
+          this.speedX += accelerationX;
+          this.speedY += accelerationY;
+        } else {
+          // Apply base speed if not attracted
+          this.speedX = this.baseSpeedX;
+          this.speedY = this.baseSpeedY;
         }
 
         this.x += this.speedX;
         this.y += this.speedY;
+
         if (this.size > 0.2) this.size -= 0.05;
       }
 
@@ -52,24 +67,19 @@ const ParticleCanvas = () => {
 
     const initParticles = () => {
       particlesArray.length = 0;
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 200; i++) { // Increased number of particles for better effect
         particlesArray.push(new Particle());
       }
     };
 
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initParticles();
+      resizeCanvas();
     };
 
     const handleMouseMove = (event) => {
-      mouseX = event.x;
-      mouseY = event.y;
+      mouseX = event.clientX;
+      mouseY = event.clientY;
     };
-
-    let mouseX = 0;
-    let mouseY = 0;
 
     window.addEventListener('resize', handleResize);
     window.addEventListener('mousemove', handleMouseMove);
@@ -87,6 +97,7 @@ const ParticleCanvas = () => {
       requestAnimationFrame(animate);
     };
 
+    resizeCanvas();
     initParticles();
     animate();
 
@@ -96,7 +107,7 @@ const ParticleCanvas = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="particle-canvas" />;
+  return <canvas ref={canvasRef} className="particle-canvas" style={{ display: 'block' }} />;
 };
 
 export default ParticleCanvas;

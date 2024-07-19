@@ -2,6 +2,7 @@
 .about{
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 80px;
   background-color: transparent;
@@ -24,8 +25,30 @@
     color: #2d2c2c;
 }
 .right p{
-    padding-left: 40p;
+    padding-left: 16px;
     font-size: 19px;
 }
 
-  
+@media (max-width: 480px) {
+    .about{
+        width: 100%;
+        display: flex;
+        gap: 80px;
+        padding: 4% 3%;
+        margin-top: 8%;
+    }
+    .left img{
+        width: 280px;
+    }
+    .right {
+        width: 100%;
+        margin-top: -60px;
+    }
+    .right h4{
+        font-size: 30px;
+    }
+    .right p{
+        font-size: 13px;
+    }
+    
+}  

@@ -30,3 +30,20 @@
   transform: scale(1.2);
   color: #333;
 }
+
+@media (max-width: 480px) {
+  .skills{
+    padding-top: 144%;
+  }
+  .skills h4{
+    margin-left: -4%;
+    font-size: 26px;
+  }
+  .skillouter {
+    width: 100%;
+    padding: 6px;
+    font-size: 26px;
+    gap: 10px;
+    margin-left: 0;
+  }
+}
