@@ -3,14 +3,44 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     background-color: #333;
     color: #fff;
     padding: 20px 40px;
     box-sizing: border-box;
-}
+    flex-wrap: wrap;
+  }
   
-.back {
+  @media (max-width: 768px) {
+    .left, .middle {
+      display: none;
+    }
+  
+    .right {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .social {
+      justify-content: center; 
+    }
+  
+    .social .icon {
+      font-size: 22px;
+    }
+  
+    .info {
+      text-align: center;
+    }
+  
+    .right h3 {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+  
+  .back {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,34 +48,49 @@
     padding: 10px;
     color: #fff;
     cursor: pointer;
-}
+    width: 100%;
+  }
   
-.back h6 {
+  .back h6 {
     margin: 0;
-}
+  }
   
-.left {
+  .left, .middle, .right {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    flex: 1;
-}
+  }
   
-.name, .email, .text {
+  .left {
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .middle {
+    flex: 1;
+    align-items: center;
+  }
+  
+  .right {
+    flex: 1;
+    align-items: flex-end;
+  }
+  
+  .name, .email, .text {
     width: 100%;
     padding: 8px;
     border: none;
     outline: none;
     border-radius: 10px;
-}
+  }
   
-.text {
+  .text {
     height: 150px;
     resize: vertical;
-}
+  }
   
-.btn {
+  .btn {
     border: none;
     outline: none;
     border-radius: 10px;
@@ -53,69 +98,155 @@
     background: #000;
     color: #fff;
     transition: transform 0.3s ease, background-color 0.3s ease;
-}
+  }
   
-.btn:hover {
+  .btn:hover {
     background: linear-gradient(to right, orange, red);
     transform: scale(1.05);
-}
+  }
   
-.middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    flex: 1; 
-}
-  
-.middle p {
+  .middle p {
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
     margin: 10px 0;
     transition: transform 0.3s ease, background-color 0.3s ease;
-}
+  }
   
-.middle p:hover {
+  .middle p:hover {
     color: bisque;
     transform: scale(1.1);
-}
+  }
   
-.right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-    flex: 1;
-}
-  
-.social {
+  .social {
     display: flex;
     gap: 20px;
     padding-top: 30px;
     padding-bottom: 10px;
-}
+  }
   
-.social .icon {
+  .social .icon {
     font-size: 26px;
     color: #fff;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.social .icon:hover{
+  }
+  
+  .social .icon:hover {
     color: #6d6b6b;
     transform: scale(1.2);
-}
+  }
   
-.info {
-    text-align: right;
-}
-  
-.info p {
-    text-align: right;
-}
-.right h3{
+  .right h3 {
     color: #6d6b6b;
     font-size: 13px;
-}
+    text-align: center;
+  }
   
+  @media (max-width: 1024px) {
+    .footer {
+      padding: 20px;
+      justify-content: center;
+    }
+  
+    .left, .middle, .right {
+      max-width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  
+    .middle p {
+      font-size: 18px;
+    }
+  
+    .name, .email, .text {
+      font-size: 14px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 6px 15px;
+    }
+  
+    .social .icon {
+      font-size: 24px;
+    }
+  
+    .info p {
+      font-size: 14px;
+    }
+  
+    .right h3 {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 15px;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left, .middle {
+      display: none;
+    }
+  
+    .right {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .social {
+      justify-content: center;
+      padding-top: 20px;
+    }
+  
+    .social .icon {
+      font-size: 22px;
+    }
+  
+    .info {
+      text-align: center;
+    }
+  
+    .right h3 {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 10px;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left, .middle {
+      display: none;
+    }
+  
+    .right {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .social {
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .social .icon {
+      font-size: 20px;
+    }
+  
+    .info p {
+      font-size: 12px;
+    }
+  
+    .right h3 {
+      font-size: 12px;
+      text-align: center;
+    }
+  }  

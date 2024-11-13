@@ -9,20 +9,30 @@ import Projects from './Components/Projects/Projects';
 import Footer from './Components/Footer/Footer';
 import Design from './Components/Designs/Design';
 
-
 function App() {
   return (
     <div className="App">
       <ParticleCanvas />
       <Navbar />
-      <Hero />
-      <Skills />
-      <About />
-      <Projects/>
-      <Design/>
-      <Footer />
+      <section id="home">
+        <Hero />
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="design">
+        <Design />
+      </section>
+      <section id="footer">
+        <Footer />
+      </section>
     </div>
   );
 }
-
 export default App;

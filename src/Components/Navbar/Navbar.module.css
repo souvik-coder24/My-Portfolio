@@ -1,5 +1,6 @@
 .navbar {
-  position: absolute;
+  position: sticky;
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -7,6 +8,12 @@
   background-color: transparent;
   z-index: 1000;
   padding: 10px 40px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(209, 202, 202, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .navbar-logo img {
@@ -35,9 +42,8 @@
 }
 
 .links li {
-  color: #1a1919;
+  color: #000;
   font-size: 20px;
-  text-decoration: none;
   font-weight: 500;
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -71,13 +77,7 @@
   transform: scale(1.05);
 }
 
-.buttonIcon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-@media (max-width: 480px){
+@media (max-width: 480px) {
   .navbar {
     padding: 6px 10px;
   }
@@ -85,7 +85,7 @@
     width: 90px;
     height: 20px;
   }
-  .right{
+  .right {
     display: none;
   }
 }

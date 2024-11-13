@@ -4,7 +4,6 @@ import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from './Footer.module.css';
-// import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } from './emailjsConfig';
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -48,16 +47,23 @@ const Footer = () => {
       });
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <>
-      <div className={styles.back}>
+      <div className={styles.back} onClick={scrollToTop}>
         <h6>Back to Top</h6>
       </div>
       <div className={styles.footer}>
         <div className={styles.left}>
           <h4>Contact Me</h4>
-          <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className={styles.name}/>
-          <input type="email" name="email" placeholder="Your email" value={formData.email} onChange={handleChange} className={styles.email}/>
+          <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className={styles.name} />
+          <input type="email" name="email" placeholder="Your email" value={formData.email} onChange={handleChange} className={styles.email} />
           <textarea name="message" placeholder="Type your message here..." value={formData.message} onChange={handleChange} className={styles.text}></textarea>
           <button className={styles.btn} onClick={handleSubmit}>Submit</button>
         </div>
