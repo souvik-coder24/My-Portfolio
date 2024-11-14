@@ -17,62 +17,70 @@
 }
 
 .cards {
+    position: relative;
     max-width: 620px;
     height: 400px;
-    border: 2px solid #3dd699;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    margin: 0 auto;
+    overflow: hidden;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    overflow: hidden; 
+    transition: transform 0.3s;
 }
 
 .cards:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     z-index: 1000;
 }
 
 .cards img {
-    width: 30%;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
-.cards h4 {
-    margin: 10px 0;
-    font-size: 24px;
-    color: #333;
-}
-
-.cards p {
-    font-size: 14px;
-    color: #555;
+.cardContent {
+    position: absolute;
+    bottom: 0; 
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); 
+    color: #ffffff;
+    z-index: 2; 
     text-align: center;
+    box-sizing: border-box;
 }
 
-.cards h6 {
-    font-size: 12px;
-    color: #aaa;
-    margin-top: 10px;
+.cardContent h4 {
+    font-size: 24px;
+    margin: 10px 0 5px;
 }
+
+.cardContent p {
+    font-size: 14px;
+    color: #f0f0f0;
+    margin: 5px 0;
+}
+
+.cardContent h6 {
+    font-size: 12px;
+    color: #d0d0d0;
+    margin-top: 5px;
+}
+
 .swiper {
+    display: flex;
     justify-content: center;
-    width: 240px;
-    height: 320px;
-  }
-  
-  .swiper-slide {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 18px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-  }
+}
