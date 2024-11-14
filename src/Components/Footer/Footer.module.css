@@ -64,7 +64,7 @@
   
   .left {
     flex: 1;
-    max-width: 300px;
+    max-width: 600px;
   }
   
   .middle {
@@ -167,11 +167,9 @@
       font-size: 14px;
       padding: 6px 15px;
     }
-  
     .social .icon {
       font-size: 24px;
     }
-  
     .info p {
       font-size: 14px;
     }
