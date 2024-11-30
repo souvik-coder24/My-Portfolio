@@ -20,42 +20,49 @@ const Design = () => {
             subtitle: 'Password Generator',
             description: `A user-friendly tool for generating secure, customizable passwords, allowing users to select length, complexity, and character types for optimal protection.`,
             image: Password,
+            link: 'https://cute-rabanadas-d18afb.netlify.app/',
         },
         {
             title: 'Project Two',
             subtitle: 'Snake Game',
             description: `A classic, interactive Snake Game with smooth controls and engaging visuals, designed for a fun and nostalgic gaming experience.`,
             image: snake,
+            link: 'https://neon-alfajores-afada8.netlify.app/',
         },
         {
             title: 'Project Three',
             subtitle: 'Analog Watch',
             description: `A sleek, interactive Analog Watch app displaying real-time hours, minutes, and seconds with a smooth, visually engaging clock interface.`,
             image: Analog,
+            link: 'https://unique-nougat-54b4ad.netlify.app/',
         },
         {
             title: 'Project Four',
             subtitle: 'Music Player',
             description: `A user-friendly music player app for playing, organizing, and enjoying your favorite tracks with a sleek and intuitive interface.`,
             image: Music,
+            link: 'https://jocular-tulumba-688768.netlify.app/',
         },
         {
             title: 'Project Five',
             subtitle: 'Cricket Logic Game',
             description: `A fun and challenging Cricket Logic Game that tests your strategic thinking with cricket-themed puzzles and engaging gameplay.`,
             image: Cricket,
+            link: 'https://graceful-mandazi-20b82a.netlify.app/',
         },
         {
             title: 'Project Six',
             subtitle: 'Education Platform',
             description: `A simple and intuitive education platform offering courses, quizzes, and interactive lessons to enhance learning and knowledge.`,
             image: Education,
+            link: 'https://magical-dolphin-14bc02.netlify.app/',
         },
         {
             title: 'Project Seven',
             subtitle: 'Todo List',
             description: `A simple and efficient To-Do List app for organizing tasks, setting priorities, and tracking progress with an intuitive interface.`,
             image: Todo,
+            link: 'https://chimerical-flan-4724cb.netlify.app/',
         },
     ];
 
@@ -80,12 +87,15 @@ const Design = () => {
                 className="mySwiper"
             >
                 {designs.map((design, index) => (
-                    <SwiperSlide key={index} className={style.cards}>
+                    <SwiperSlide 
+                        key={index} 
+                        className={style.cards} 
+                        onClick={() => window.open(design.link, '_blank')}
+                    >
                         <img src={design.image} alt={design.subtitle} />
                         <div className={style.cardContent}>
                             <h4>{design.subtitle}</h4>
                             <p>{design.description}</p>
-                            <h6>{design.date}</h6>
                         </div>
                     </SwiperSlide>
                 ))}
