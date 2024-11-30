@@ -4,7 +4,7 @@ import styles from './Hero.module.css';
 import { FaFacebook, FaLinkedin, FaGithub, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { Typewriter } from 'react-simple-typewriter';
 import img from '../../assets/Hero/Hero.png';
-import pdf from '../../pdf/Souvik CV.pdf';
+import pdf from '../../pdf/Souvik.pdf';
 
 const Hero = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
