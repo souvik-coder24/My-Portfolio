@@ -23,40 +23,24 @@ const Footer = () => {
     emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData, EMAILJS_USER_ID)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        toast.success('Message sent successfully!', {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success('Message sent successfully!', { position: "top-right" });
       })
       .catch((error) => {
         console.error('FAILED...', error);
-        toast.error('Message sending failed.', {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.error('Message sending failed.', { position: "top-right" });
       });
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
     <>
-      <div className={styles.back} onClick={scrollToTop}>
+      <div className={styles.back} onClick={() => scrollToSection('home')}>
         <h6>Back to Top</h6>
       </div>
       <div className={styles.footer}>
@@ -68,18 +52,18 @@ const Footer = () => {
           <button className={styles.btn} onClick={handleSubmit}>Submit</button>
         </div>
         <div className={styles.middle}>
-          <p>Home</p>
-          <p>About</p>
-          <p>Portfolio</p>
-          <p>Projects</p>
+          <p onClick={() => scrollToSection('home')}>Home</p>
+          <p onClick={() => scrollToSection('about')}>About</p>
+          <p onClick={() => scrollToSection('skils')}>Expertise</p>
+          <p onClick={() => scrollToSection('projects')}>Projects</p>
         </div>
         <div className={styles.right}>
           <div className={styles.social}>
-            <FaFacebook className={styles.icon} />
-            <FaLinkedin className={styles.icon} />
-            <FaGithub className={styles.icon} />
-            <FaInstagram className={styles.icon} />
-            <FaTwitter className={styles.icon} />
+            <a href="https://facebook.com/profile.php?id=100012452561024" target="_blank" rel="noopener noreferrer"><FaFacebook className={styles.icon} /></a>
+            <a href="https://www.linkedin.com/in/souvik-d1" target="_blank" rel="noopener noreferrer"><FaLinkedin className={styles.icon} /></a>
+            <a href="https://github.com/souvik-coder24" target="_blank" rel="noopener noreferrer"><FaGithub className={styles.icon} /></a>
+            <a href="https://instagram.com/souvikdas89/profilecard/?igsh=MTK2bWFtemlrZ2FhNA==" target="_blank" rel="noopener noreferrer"><FaInstagram className={styles.icon} /></a>
+            <a href="https://twitter.com/SouvikCoder?t=2cMOIOYHedwCxxvbgS1EwA&s=09" target="_blank" rel="noopener noreferrer"><FaTwitter className={styles.icon} /></a>
           </div>
           <div className={styles.info}>
             <p>JIrat 2no Colony, Near Lokenath Vaban</p>
@@ -94,6 +78,6 @@ const Footer = () => {
       <ToastContainer />
     </>
   );
-}
+};
 
 export default Footer;

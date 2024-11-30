@@ -58,7 +58,7 @@ const Hero = () => {
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1, duration: 1 }}>
-              <motion.a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              <motion.a href="https://facebook.com/profile.php?id=100012452561024" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                 <FaFacebook className={styles.sicon} />
               </motion.a>
               <motion.a href="https://www.linkedin.com/in/souvik-d1" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
@@ -67,10 +67,10 @@ const Hero = () => {
               <motion.a href="https://github.com/souvik-coder24" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                 <FaGithub className={styles.sicon} />
               </motion.a>
-              <motion.a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              <motion.a href="https://instagram.com/souvikdas89/profilecard/?igsh=MTK2bWFtemlrZ2FhNA==" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                 <FaInstagram className={styles.sicon} />
               </motion.a>
-              <motion.a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              <motion.a href="https://twitter.com/SouvikCoder?t=2cMOIOYHedwCxxvbgS1EwA&s=09" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                 <FaXTwitter className={styles.sicon} />
               </motion.a>
             </motion.div>

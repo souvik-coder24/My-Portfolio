@@ -1,9 +1,9 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { FaCode, FaHtml5, FaCss3, FaBootstrap, FaNpm, FaGithub, FaGitAlt, FaFigma, FaReact, FaNodeJs, FaVideo } from "react-icons/fa";
+import { FaCode, FaHtml5, FaCss3, FaNpm, FaGithub, FaGitAlt, FaFigma, FaReact, FaNodeJs, FaVideo } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
-import { SiTailwindcss, SiVite, SiFirebase, SiVitest } from "react-icons/si";
+import { SiTailwindcss, SiVite, SiFirebase} from "react-icons/si";
 import { BiLogoNetlify } from "react-icons/bi";
 import { TbBrandFramerMotion, TbApi } from "react-icons/tb";
 import style from './Projects.module.css';
@@ -22,16 +22,20 @@ const Projects = () => {
         { name: 'React', icon: <FaReact /> },
         { name: 'Vite', icon: <SiVite /> },
         { name: 'HTML', icon: <FaHtml5 /> },
+        { name: 'Git', icon: <FaGitAlt /> },
         { name: 'JavaScript', icon: <RiJavascriptFill /> },
+        { name: 'Tailwind', icon: <SiTailwindcss /> },
         { name: 'Node.js', icon: <FaNodeJs /> },
         { name: 'npm', icon: <FaNpm /> },
+        { name: 'Swiggy API', icon: <TbApi /> },
+        { name: 'Gemini API', icon: <TbApi /> },
         { name: 'Framer Motion', icon: <TbBrandFramerMotion /> },
         { name: 'Firebase', icon: <SiFirebase /> },
         { name: 'Netlify', icon: <BiLogoNetlify /> }
       ],
       image: Hungry,
       icon: <FaCode />,
-      videoLink: 'https://www.youtube.com/watch?v=yourVideoLink',
+      videoLink: 'https://youtu.be/GMTusnmyrWc?si=mPVljbRklu3vNHBU',
       githubLink: 'https://github.com/souvik-coder24/HungryBaaz',
       websiteLink: 'https://hungrybaaz.netlify.app'
     },
@@ -42,20 +46,23 @@ const Projects = () => {
       date: 'Sep 2024 - Sep 2024',
       tech: [
         { name: 'React', icon: <FaReact /> },
+        { name: 'Figma', icon: <FaFigma /> },
         { name: 'Vite', icon: <SiVite /> },
         { name: 'HTML', icon: <FaHtml5 /> },
+        { name: 'Git', icon: <FaGitAlt /> },
         { name: 'JavaScript', icon: <RiJavascriptFill /> },
-        { name: 'Module css', icon: <FaCss3 /> },
+        { name: 'Tailwind', icon: <SiTailwindcss /> },
+        { name: 'Module CSS', icon: <FaCss3 /> },
         { name: 'Node.js', icon: <FaNodeJs /> },
         { name: 'npm', icon: <FaNpm /> },
+        { name: 'Gemini API', icon: <TbApi /> },
+        { name: 'ExerciseDB API', icon: <TbApi /> },
         { name: 'Framer Motion', icon: <TbBrandFramerMotion /> },
-        { name: 'Firebase', icon: <SiFirebase /> },
-        { name: 'Vitest', icon: <SiVitest /> },
         { name: 'Netlify', icon: <BiLogoNetlify /> }
       ],
       image: IronX,
       icon: <FaCode />,
-      videoLink: 'https://www.youtube.com/watch?v=yourVideoLink',
+      videoLink: 'https://youtu.be/g6-rlLQx6Ck',
       githubLink: 'https://github.com/souvik-coder24/IronX',
       websiteLink: 'https://ironx.netlify.app'
     },
@@ -68,18 +75,19 @@ const Projects = () => {
         { name: 'React', icon: <FaReact /> },
         { name: 'Vite', icon: <SiVite /> },
         { name: 'HTML', icon: <FaHtml5 /> },
+        { name: 'Git', icon: <FaGitAlt /> },
         { name: 'JavaScript', icon: <RiJavascriptFill /> },
-        { name: 'Module css', icon: <FaCss3 /> },
+        { name: 'Module CSS', icon: <FaCss3 /> },
         { name: 'Node.js', icon: <FaNodeJs /> },
         { name: 'npm', icon: <FaNpm /> },
+        { name: 'TMDB API', icon: <TbApi /> },
         { name: 'Framer Motion', icon: <TbBrandFramerMotion /> },
         { name: 'Firebase', icon: <SiFirebase /> },
-        { name: 'Vitest', icon: <SiVitest /> },
         { name: 'Netlify', icon: <BiLogoNetlify /> }
       ],
       image: Binge,
       icon: <FaCode />,
-      videoLink: 'https://www.youtube.com/watch?v=yourVideoLink',
+      videoLink: 'https://youtu.be/mYe3ALAnS5k',
       githubLink: 'https://github.com/souvik-coder24/Bingebox--a-movie-streaming-web',
       websiteLink: 'https://boxbinge.netlify.app'
     }

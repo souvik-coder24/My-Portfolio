@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className={styles.right}>
         <ul className={styles.links}>
           <li onClick={() => scrollToSection('home')}>Home</li>
-          <li onClick={() => scrollToSection('skills')}>Skills</li>
+          <li onClick={() => scrollToSection('skills')}>Expertise</li>
           <li onClick={() => scrollToSection('about')}>About</li>
           <li onClick={() => scrollToSection('projects')}>Projects</li>
           <li onClick={() => scrollToSection('design')}>Design</li>
