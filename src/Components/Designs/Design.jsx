@@ -18,8 +18,8 @@ const Design = () => {
     const designs = [
         {
             title: 'Project One',
-            subtitle: 'Netflix Clone',
-            description: `A user-friendly tool for generating secure, customizable passwords, allowing users to select length, complexity, and character types for optimal protection.`,
+            subtitle: 'Netflix UI Clone',
+            description: `A sleek and immersive platform for streaming movies and shows, featuring dynamic sliders, trailers, and responsive design for seamless browsing and viewing.`,
             image: netflix,
             link: 'https://rococo-kashata-a5f1dd.netlify.app/',
         },
