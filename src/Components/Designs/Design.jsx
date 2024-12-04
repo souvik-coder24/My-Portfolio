@@ -5,6 +5,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import style from './Design.module.css';
+import netflix from '../../assets/Hero/netflix.png'
 import Analog from '../../assets/Hero/Analog.png';
 import snake from '../../assets/Hero/Snake.png';
 import Password from '../../assets/Hero/Password.png';
@@ -15,6 +16,13 @@ import Education from '../../assets/Hero/education.png';
 
 const Design = () => {
     const designs = [
+        {
+            title: 'Project One',
+            subtitle: 'Netflix Clone',
+            description: `A user-friendly tool for generating secure, customizable passwords, allowing users to select length, complexity, and character types for optimal protection.`,
+            image: netflix,
+            link: 'https://rococo-kashata-a5f1dd.netlify.app/',
+        },
         {
             title: 'Project One',
             subtitle: 'Password Generator',
